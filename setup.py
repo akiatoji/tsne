@@ -32,7 +32,7 @@ if sys.platform == 'darwin':
     else:
         extra_compile_args=['-I/System/Library/Frameworks/vecLib.framework/Headers']
 
-    ext_modules = [Extension(name='bh_sne',
+    ext_modules = [Extension(name='tsne.bh_sne',
                    sources=['tsne/bh_sne_src/quadtree.cpp', 'tsne/bh_sne_src/tsne.cpp', 'tsne/bh_sne.pyx'],
                    include_dirs=[numpy.get_include(), 'tsne/bh_sne_src/'],
                    extra_compile_args=extra_compile_args,
